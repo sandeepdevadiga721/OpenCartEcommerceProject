@@ -11,7 +11,7 @@
 		<parameter name="browser" value="chrome" />
 		<classes>
 			<class name="testCases.TC001_AccountRegistrationTest" />
-			<class name="testCases.TC002_LoginTest" />
+	<!-- --><class name="testCases.TC002_LoginTest" />
 			<class name="testCases.TC003_SearchItemTest" />
 			<class name="testCases.TC004_AddtoCartTest" />
 			<class name="testCases.TC005_ViewShoppingCart" />

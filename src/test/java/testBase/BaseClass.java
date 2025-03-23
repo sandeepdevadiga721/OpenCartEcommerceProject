@@ -3,7 +3,7 @@ package testBase;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.sql.Date;
+import java.util.Date;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Properties;
@@ -103,7 +103,7 @@ public class BaseClass {
 
 	public String captureScreen(String tname) {
 
-		String timeStamp = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date(0));
+		String timeStamp = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
 		TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
 		File sourceFile = takesScreenshot.getScreenshotAs(OutputType.FILE);
 

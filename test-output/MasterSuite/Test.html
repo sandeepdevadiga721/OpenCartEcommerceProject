@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>13/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>12/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Mar 09 18:47:42 IST 2025</td>
+<td>Started on:</td><td>Sun Mar 23 18:35:35 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>146 seconds (146300 ms)</td>
+<tr><td>Total time:</td><td>136 seconds (136355 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,102 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testCases.TC009_OrderProduct_EndToEnd_testcase.verify_account_registration()'><b>verify_account_registration</b><br>Test class: testCases.TC009_OrderProduct_EndToEnd_testcase</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (1197, -54)
+  (Session info: chrome=134.0.6998.118)
+Build info: version: &apos;4.24.0&apos;, revision: &apos;748ffc9bc3&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.11&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [bf2dfb596533f66f5c19afb8fa06c896, clickElement {id=f.69F0D3E472634E64FE95E44FCE6BE0DD.d.4F18DAAA59902AD18A29931639961BE5.e.197}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.118, chrome: {chromedriverVersion: 134.0.6998.165 (fd886e2cb29..., userDataDir: C:\Users\dsand\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50561}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50561/devtoo..., se:cdpVersion: 134.0.6998.118, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (bf2dfb596533f66f5c19afb8fa06c896)] -&gt; xpath: //button[@id=&apos;button-shipping-methods&apos;]]
+Session ID: bf2dfb596533f66f5c19afb8fa06c896
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy19.click(Unknown Source)
+	at pageObjects.CheckoutPage.ClickShoppingMethodchoose(CheckoutPage.java:212)
+	at testCases.TC009_OrderProduct_EndToEnd_testcase.verify_account_registration(TC009_OrderProduct_EndToEnd_testcase.java:132)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1495232387", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1495232387'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (1197, -54)
+  (Session info: chrome=134.0.6998.118)
+Build info: version: &apos;4.24.0&apos;, revision: &apos;748ffc9bc3&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.11&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [bf2dfb596533f66f5c19afb8fa06c896, clickElement {id=f.69F0D3E472634E64FE95E44FCE6BE0DD.d.4F18DAAA59902AD18A29931639961BE5.e.197}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.118, chrome: {chromedriverVersion: 134.0.6998.165 (fd886e2cb29..., userDataDir: C:\Users\dsand\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50561}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50561/devtoo..., se:cdpVersion: 134.0.6998.118, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (bf2dfb596533f66f5c19afb8fa06c896)] -&gt; xpath: //button[@id=&apos;button-shipping-methods&apos;]]
+Session ID: bf2dfb596533f66f5c19afb8fa06c896
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at jdk.internal.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy19.click(Unknown Source)
+	at pageObjects.CheckoutPage.ClickShoppingMethodchoose(CheckoutPage.java:212)
+	at testCases.TC009_OrderProduct_EndToEnd_testcase.verify_account_registration(TC009_OrderProduct_EndToEnd_testcase.java:132)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>14</td>
+<td>testCases.TC009_OrderProduct_EndToEnd_testcase@5bf8fa12</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,34 +172,29 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testCases.TC010_LoginDDTest.Verify_loginDDT()'><b>Verify_loginDDT</b><br>Test class: testCases.TC010_LoginDDTest<br>Parameters: trouseradmin02@gmail.com, test@123, Valid</td>
+<td title='testCases.TC008_CheckUserLogout.CheckUserLogout()'><b>CheckUserLogout</b><br>Test class: testCases.TC008_CheckUserLogout</td>
 <td></td>
-<td>2</td>
-<td>testCases.TC010_LoginDDTest@29ca3d04</td></tr>
+<td>4</td>
+<td>testCases.TC008_CheckUserLogout@1608bcbd</td></tr>
+<tr>
+<td title='testCases.TC006_CheckOutProcess.CheckOutProductInCart()'><b>CheckOutProductInCart</b><br>Test class: testCases.TC006_CheckOutProcess</td>
+<td></td>
+<td>18</td>
+<td>testCases.TC006_CheckOutProcess@6f63b475</td></tr>
 <tr>
 <td title='testCases.TC004_AddtoCartTest.addToCart()'><b>addToCart</b><br>Test class: testCases.TC004_AddtoCartTest</td>
 <td></td>
 <td>4</td>
 <td>testCases.TC004_AddtoCartTest@8c3619e</td></tr>
 <tr>
-<td title='testCases.TC008_CheckUserLogout.CheckUserLogout()'><b>CheckUserLogout</b><br>Test class: testCases.TC008_CheckUserLogout</td>
+<td title='testCases.TC010_LoginDDTest.Verify_loginDDT()'><b>Verify_loginDDT</b><br>Test class: testCases.TC010_LoginDDTest<br>Parameters: trouser01@gmail.com, test@12, Valid</td>
 <td></td>
-<td>4</td>
-<td>testCases.TC008_CheckUserLogout@1608bcbd</td></tr>
+<td>3</td>
+<td>testCases.TC010_LoginDDTest@29ca3d04</td></tr>
 <tr>
-<td title='testCases.TC001_AccountRegistrationTest.verify_account_registration()'><b>verify_account_registration</b><br>Test class: testCases.TC001_AccountRegistrationTest</td>
+<td title='testCases.TC010_LoginDDTest.Verify_loginDDT()'><b>Verify_loginDDT</b><br>Test class: testCases.TC010_LoginDDTest<br>Parameters: trousernot04@gmail.com, test@12345, Invalid</td>
 <td></td>
-<td>4</td>
-<td>testCases.TC001_AccountRegistrationTest@53f6fd09</td></tr>
-<tr>
-<td title='testCases.TC006_CheckOutProcess.CheckOutProductInCart()'><b>CheckOutProductInCart</b><br>Test class: testCases.TC006_CheckOutProcess</td>
-<td></td>
-<td>17</td>
-<td>testCases.TC006_CheckOutProcess@6f63b475</td></tr>
-<tr>
-<td title='testCases.TC010_LoginDDTest.Verify_loginDDT()'><b>Verify_loginDDT</b><br>Test class: testCases.TC010_LoginDDTest<br>Parameters: trouserfinance03@gmail.com, test@1234, Valid</td>
-<td></td>
-<td>2</td>
+<td>12</td>
 <td>testCases.TC010_LoginDDTest@29ca3d04</td></tr>
 <tr>
 <td title='testCases.TC003_SearchItemTest.SearchItem()'><b>SearchItem</b><br>Test class: testCases.TC003_SearchItemTest</td>
@@ -111,35 +202,35 @@ function toggleAllBoxes() {
 <td>4</td>
 <td>testCases.TC003_SearchItemTest@3ad2e17</td></tr>
 <tr>
-<td title='testCases.TC010_LoginDDTest.Verify_loginDDT()'><b>Verify_loginDDT</b><br>Test class: testCases.TC010_LoginDDTest<br>Parameters: trousernot04@gmail.com, test@12345, Invalid</td>
-<td></td>
-<td>12</td>
-<td>testCases.TC010_LoginDDTest@29ca3d04</td></tr>
-<tr>
 <td title='testCases.TC007_CheckingOrderHistory.CheckOrderHistory()'><b>CheckOrderHistory</b><br>Test class: testCases.TC007_CheckingOrderHistory</td>
 <td></td>
 <td>8</td>
 <td>testCases.TC007_CheckingOrderHistory@554e218</td></tr>
 <tr>
-<td title='testCases.TC009_OrderProduct_EndToEnd_testcase.verify_account_registration()'><b>verify_account_registration</b><br>Test class: testCases.TC009_OrderProduct_EndToEnd_testcase</td>
+<td title='testCases.TC001_AccountRegistrationTest.verify_account_registration()'><b>verify_account_registration</b><br>Test class: testCases.TC001_AccountRegistrationTest</td>
 <td></td>
-<td>30</td>
-<td>testCases.TC009_OrderProduct_EndToEnd_testcase@5bf8fa12</td></tr>
+<td>5</td>
+<td>testCases.TC001_AccountRegistrationTest@53f6fd09</td></tr>
 <tr>
 <td title='testCases.TC005_ViewShoppingCart.ViewCart()'><b>ViewCart</b><br>Test class: testCases.TC005_ViewShoppingCart</td>
 <td></td>
 <td>7</td>
 <td>testCases.TC005_ViewShoppingCart@4331d187</td></tr>
 <tr>
+<td title='testCases.TC010_LoginDDTest.Verify_loginDDT()'><b>Verify_loginDDT</b><br>Test class: testCases.TC010_LoginDDTest<br>Parameters: trouserfinance03@gmail.com, test@1234, Valid</td>
+<td></td>
+<td>3</td>
+<td>testCases.TC010_LoginDDTest@29ca3d04</td></tr>
+<tr>
+<td title='testCases.TC010_LoginDDTest.Verify_loginDDT()'><b>Verify_loginDDT</b><br>Test class: testCases.TC010_LoginDDTest<br>Parameters: trouseradmin02@gmail.com, test@123, Valid</td>
+<td></td>
+<td>2</td>
+<td>testCases.TC010_LoginDDTest@29ca3d04</td></tr>
+<tr>
 <td title='testCases.TC002_LoginTest.Verify_login()'><b>Verify_login</b><br>Test class: testCases.TC002_LoginTest</td>
 <td></td>
 <td>2</td>
 <td>testCases.TC002_LoginTest@39a2bb97</td></tr>
-<tr>
-<td title='testCases.TC010_LoginDDTest.Verify_loginDDT()'><b>Verify_loginDDT</b><br>Test class: testCases.TC010_LoginDDTest<br>Parameters: trouser01@gmail.com, test@12, Valid</td>
-<td></td>
-<td>3</td>
-<td>testCases.TC010_LoginDDTest@29ca3d04</td></tr>
 </table><p>
 </body>
 </html>
