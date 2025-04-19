@@ -57,8 +57,7 @@ public class TC007_CheckingOrderHistory extends BaseClass {
 
 		Thread.sleep(1000);
 
-		// Verify the order details page is loaded (you can verify the URL contains the
-		// order ID)
+		// Verify the order details page is loaded (you can verify the URL contains the order ID)
 		String currentURL = driver.getCurrentUrl();
 		Assert.assertTrue(currentURL.contains("order_id=" + orderID.replace("#", "").trim()),
 				"Order details page not loaded for Order ID: " + orderID);
