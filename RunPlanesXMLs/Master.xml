@@ -19,7 +19,7 @@
 			<class name="testCases.TC007_CheckingOrderHistory" />
 			<class name="testCases.TC008_CheckUserLogout" /> 
 			<class name="testCases.TC009_OrderProduct_EndToEnd_testcase" /> 
-			<!--<class name="testCases.TC010_LoginDDTest" />--> 
+			<class name="testCases.TC010_LoginDDTest" /><!----> 
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
