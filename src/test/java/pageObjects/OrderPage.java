@@ -9,6 +9,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import testBase.BaseClass;
+
 public class OrderPage extends BasePage {
 
 	public OrderPage(WebDriver driver) {
@@ -88,7 +90,8 @@ public class OrderPage extends BasePage {
 	}
 
 	public void clickContinuebtn() {
-		actions.moveToElement(Continuebtn).perform();
+		//actions.moveToElement(Continuebtn).perform();
+		BaseClass.scrollIntoView(driver,Continuebtn);
 
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", Continuebtn);
 

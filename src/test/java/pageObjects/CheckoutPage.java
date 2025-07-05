@@ -11,6 +11,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 
+import testBase.BaseClass;
+
 public class CheckoutPage extends BasePage {
 
 	public CheckoutPage(WebDriver driver) {
@@ -135,44 +137,53 @@ public class CheckoutPage extends BasePage {
 	private WebElement confirmOrderbtn;
 
 	public void ClickExistingAddressbtn() {
+		BaseClass.scrollIntoView(driver,iWantToUseAnExistingAddrRadiobtn);
 		iWantToUseAnExistingAddrRadiobtn.click();
 	}
 
 	public void ClickNewAddressbtn() {
+		BaseClass.scrollIntoView(driver,iWantToUseANewAddressRadiobtn);
 		iWantToUseANewAddressRadiobtn.click();
 	}
 
 	public void setFirstNametxt(String fname) {
+		BaseClass.scrollIntoView(driver,firstNametxt);
 		firstNametxt.sendKeys(fname);
 
 	}
 
 	public void setLastNametxt(String fname) {
+		BaseClass.scrollIntoView(driver,lastNametxt);
 		lastNametxt.sendKeys(fname);
 
 	}
 
 	public void setCompanytxt(String cname) {
+		BaseClass.scrollIntoView(driver,companynametxt);
 		companynametxt.sendKeys(cname);
 
 	}
 
 	public void setAddress1txt(String adress1) {
+		BaseClass.scrollIntoView(driver,address1txt);
 		address1txt.sendKeys(adress1);
 
 	}
 
 	public void setAddress2txt(String adress2) {
+		BaseClass.scrollIntoView(driver,address2txt);
 		address2txt.sendKeys(adress2);
 
 	}
 
 	public void setCitytxt(String city) {
+		BaseClass.scrollIntoView(driver,citytxt);
 		citytxt.sendKeys(city);
 
 	}
 
 	public void setPostcodetxt(String postcode) {
+		BaseClass.scrollIntoView(driver,postCodetxt);
 		postCodetxt.sendKeys(postcode);
 
 	}
@@ -209,6 +220,7 @@ public class CheckoutPage extends BasePage {
 	}
 
 	public void ClickShoppingMethodchoose() {
+		BaseClass.scrollIntoView(driver,ShoppingMethodchoosebtn);	
 		ShoppingMethodchoosebtn.click();
 	}
 
@@ -217,8 +229,9 @@ public class CheckoutPage extends BasePage {
 	}
 
 	public void ClickCountinueBtn2() {
-		Actions actions = new Actions(driver);
-		actions.moveToElement(continuebtn2).perform();
+		//Actions actions = new Actions(driver);
+		//actions.moveToElement(continuebtn2).perform();
+		BaseClass.scrollIntoView(driver,continuebtn2);
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", continuebtn2);
 
 	}
@@ -267,14 +280,17 @@ public class CheckoutPage extends BasePage {
 	}
 
 	public void ClickPaymentMethodchoose() {
+		BaseClass.scrollIntoView(driver,PaymentMethodchoosebtn);
 		PaymentMethodchoosebtn.click();
 	}
 
 	public void ClickCashOnDelivery() {
+		BaseClass.scrollIntoView(driver,cashOnDeliverybtn);
 		cashOnDeliverybtn.click();
 	}
 
 	public void ClickCountinueBtn3() {
+		BaseClass.scrollIntoView(driver,continuebtn3);
 		continuebtn3.click();
 	}
 
@@ -307,6 +323,7 @@ public class CheckoutPage extends BasePage {
 	}
 
 	public void setCommentAboutOrder(String comment) {
+		BaseClass.scrollIntoView(driver,addCommentsAboutYourOrder);
 		addCommentsAboutYourOrder.sendKeys(comment);
 
 	}
@@ -364,8 +381,8 @@ public class CheckoutPage extends BasePage {
 	}
 
 	public void ClickConfirmOrder() {
-		actions.moveToElement(confirmOrderbtn).perform();
-
+		//actions.moveToElement(confirmOrderbtn).perform();
+		BaseClass.scrollIntoView(driver,confirmOrderbtn);
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", confirmOrderbtn);
 	}
 

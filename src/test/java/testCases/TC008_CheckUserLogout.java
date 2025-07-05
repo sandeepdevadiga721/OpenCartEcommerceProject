@@ -1,5 +1,6 @@
 package testCases;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -26,6 +27,9 @@ public class TC008_CheckUserLogout extends BaseClass {
 		boolean TargetPage = macc.isMyAccountPageExists();
 
 		Assert.assertEquals(TargetPage, true, "Login Failed");
+		
+		 JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
 
 		macc.ClickLogoutbtn();
 

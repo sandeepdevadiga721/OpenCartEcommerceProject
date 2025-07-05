@@ -14,16 +14,16 @@ public class TC010_LoginDDTest extends BaseClass {
 	@Test(groups="Datadriven",dataProvider="LoginData",dataProviderClass=DataProviders.class)
 	public void Verify_loginDDT(String email, String pwd, String exp) {
 		try {
-
 			HomePage hp = new HomePage(driver);
 			hp.clickMyAccount();
 			hp.clickLogin();
 
 			LoginPage lp = new LoginPage(driver);
 			lp.setEmail(email);
+			Thread.sleep(1000);
 			lp.setPassword(pwd);
 			lp.clickLogin();
-			
+
 			Thread.sleep(1000);
 
 			MyAccountPage macc = new MyAccountPage(driver);
@@ -34,6 +34,7 @@ public class TC010_LoginDDTest extends BaseClass {
 				if(TargetPage==true)
 				{
 					macc.ClickLogoutbtn();
+					Thread.sleep(3000);
 					Assert.assertTrue(true);
 					
 				}
@@ -48,6 +49,7 @@ public class TC010_LoginDDTest extends BaseClass {
 				if(TargetPage==true)
 				{
 					macc.ClickLogoutbtn();
+					Thread.sleep(3000);
 					Assert.assertTrue(false);
 					
 					

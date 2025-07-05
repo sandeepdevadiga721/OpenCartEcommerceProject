@@ -11,10 +11,12 @@ import java.util.Properties;
 import java.util.Random;
 import java.util.UUID;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -146,5 +148,14 @@ public class BaseClass {
 
 		return targetFilePath;
 	}
+	
+	public static void scrollIntoView(WebDriver driver, WebElement element) {
+        try {
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("arguments[0].scrollIntoView({block: 'center', inline: 'nearest'});", element);
+        } catch (Exception e) {
+            System.out.println("Failed to scroll element into view: " + e.getMessage());
+        }
+    }
 
 }

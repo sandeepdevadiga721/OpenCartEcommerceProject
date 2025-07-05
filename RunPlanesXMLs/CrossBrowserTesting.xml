@@ -11,7 +11,7 @@
     <classes>
       <class name="testCases.TC009_OrderProduct_EndToEnd_testcase"/>
     </classes>
-  </test> <!-- Test -->
+  </test>  <!-- Test -->
   
   <test  name="edgetest">
   <parameter name="os" value="Windows"/>
@@ -29,7 +29,7 @@
     <classes>
       <class name="testCases.TC009_OrderProduct_EndToEnd_testcase"/>
     </classes>
-  </test> <!-- Test -->
+  </test>  <!-- Test -->
   
   
 </suite> <!-- Suite -->

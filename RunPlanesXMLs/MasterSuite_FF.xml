@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="MasterSuite_FF"  >
+
+	<listeners>
+		<listener class-name="utilities.ExtentReportManager"  />
+	</listeners>
+
+	<test thread-count="5" name="Test">
+		<parameter name="os" value="Windows" />
+		<parameter name="browser" value="firefox" />
+		<classes>
+			<class name="testCases.TC001_AccountRegistrationTest" />
+	        <class name="testCases.TC002_LoginTest" />
+			<class name="testCases.TC003_SearchItemTest" />
+			<class name="testCases.TC004_AddtoCartTest" />
+			<class name="testCases.TC005_ViewShoppingCart" />
+			<class name="testCases.TC006_CheckOutProcess" />
+			<class name="testCases.TC007_CheckingOrderHistory" />
+			<class name="testCases.TC008_CheckUserLogout" /> 
+			<class name="testCases.TC009_OrderProduct_EndToEnd_testcase" /> 
+			<class name="testCases.TC010_LoginDDTest" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

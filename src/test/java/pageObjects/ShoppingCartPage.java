@@ -104,9 +104,9 @@ public class ShoppingCartPage extends BasePage {
 	}
 
 	public void clickCheckoutbtn() {
-		actions.moveToElement(checkoutbtn).perform();
-
-		((JavascriptExecutor) driver).executeScript("arguments[0].click();", checkoutbtn);
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", checkoutbtn);		
+		//actions.moveToElement(checkoutbtn).perform();
+	    ((JavascriptExecutor) driver).executeScript("arguments[0].click();", checkoutbtn);
 
 	}
 

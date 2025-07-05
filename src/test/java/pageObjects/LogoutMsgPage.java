@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 
+import testBase.BaseClass;
+
 public class LogoutMsgPage extends BasePage {
 
 	public LogoutMsgPage(WebDriver driver) {
@@ -40,6 +42,7 @@ public class LogoutMsgPage extends BasePage {
 	}
 
 	public void clickcontinuebtn() {
+		BaseClass.scrollIntoView(driver,countinuebtn);
 		countinuebtn.click();
 	}
 }

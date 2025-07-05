@@ -1,5 +1,6 @@
 package testCases;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -56,6 +57,8 @@ public class TC007_CheckingOrderHistory extends BaseClass {
 		opg.clickViewLink(latestOrderIndex);
 
 		Thread.sleep(1000);
+		 JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
 
 		// Verify the order details page is loaded (you can verify the URL contains the order ID)
 		String currentURL = driver.getCurrentUrl();

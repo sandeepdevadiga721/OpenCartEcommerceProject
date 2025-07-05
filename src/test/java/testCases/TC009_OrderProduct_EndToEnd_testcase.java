@@ -1,5 +1,6 @@
 package testCases;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -98,6 +99,9 @@ public class TC009_OrderProduct_EndToEnd_testcase extends BaseClass {
 		Assert.assertTrue(scp.isItemimageExistsInCart(), "iPhone image is not displayed on the Cart page");
 
 		Assert.assertTrue(scp.isItemNameExistsInCart(), "iPhone text name is not displayed on the Cart page");
+		
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
 
 		scp.clickCheckoutbtn();
 
@@ -125,7 +129,7 @@ public class TC009_OrderProduct_EndToEnd_testcase extends BaseClass {
 
 		cpg.ClickCountinueBtn();
 
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		
 		cpg.ClickcloseIconPopup();
 
@@ -232,6 +236,8 @@ public class TC009_OrderProduct_EndToEnd_testcase extends BaseClass {
 		opg.clickViewLink(latestOrderIndex);
 
 		Thread.sleep(1000);
+		
+		js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
 
 		// Verify the order details page is loaded (you can verify the URL contains the
 		// order ID)
@@ -256,11 +262,15 @@ public class TC009_OrderProduct_EndToEnd_testcase extends BaseClass {
 		Assert.assertEquals(totalAmount, finalAmount, "Ordered amount is not matching");
 		Assert.assertEquals(dateAdded, final_orderDate, "Ordered date is not matching");
 
+	    
+	    
 		sopg.clickContinuebtn();
 
 		opg.clickContinuebtn();
 
 		Thread.sleep(1000);
+		
+		js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
 
 		macc.ClickLogoutbtn();
 

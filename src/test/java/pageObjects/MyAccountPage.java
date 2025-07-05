@@ -1,15 +1,20 @@
 package pageObjects;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
+
+import testBase.BaseClass;
 
 public class MyAccountPage extends BasePage {
 
 	public MyAccountPage(WebDriver driver) {
 		super(driver);
 	}
+	
+	 JavascriptExecutor js = (JavascriptExecutor) driver;
 
 	@FindBy(xpath = "//h2[normalize-space()='My Account']")
 	@CacheLookup // my account page heading
@@ -19,7 +24,7 @@ public class MyAccountPage extends BasePage {
 	@CacheLookup
 	private WebElement orderHistorybtn;
 
-	@FindBy(xpath = "//*[@id=\"column-right\"]/div/a[13]")
+	@FindBy(xpath = "//*[@id='column-right']/div/a[13]")
 	@CacheLookup
 	private WebElement logoutbtn;
 
@@ -36,8 +41,9 @@ public class MyAccountPage extends BasePage {
 	}
 
 	public void ClickLogoutbtn() {
-		actions.moveToElement(logoutbtn).perform();
-		logoutbtn.click();
+		//actions.moveToElement(logoutbtn).perform();
+		BaseClass.scrollIntoView(driver,logoutbtn);
+		js.executeScript("arguments[0].click();", logoutbtn);
 	}
 
 }

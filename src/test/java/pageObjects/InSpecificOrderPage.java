@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import testBase.BaseClass;
+
 public class InSpecificOrderPage extends BasePage {
 
 	public InSpecificOrderPage(WebDriver driver) {
@@ -66,7 +68,8 @@ public class InSpecificOrderPage extends BasePage {
 	}
 
 	public void clickContinuebtn() {
-		actions.moveToElement(Continuebtn).perform();
+		//actions.moveToElement(Continuebtn).perform();
+		BaseClass.scrollIntoView(driver,Continuebtn);
 
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", Continuebtn);
 	}
