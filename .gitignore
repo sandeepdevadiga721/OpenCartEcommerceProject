@@ -1,1 +1,7 @@
 /target/
+
+# Ignore generated test files and editor backups
+reports/
+screenshots/
+test-output/
+.gitignore~
