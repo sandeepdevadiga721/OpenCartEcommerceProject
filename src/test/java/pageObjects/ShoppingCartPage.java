@@ -14,6 +14,7 @@ public class ShoppingCartPage extends BasePage {
 	public ShoppingCartPage(WebDriver driver) {
 		super(driver);
 	}
+	
 
 	@FindBy(xpath = "//span[normalize-space()='Shopping Cart']")
 	@CacheLookup
@@ -48,7 +49,9 @@ public class ShoppingCartPage extends BasePage {
 	private WebElement checkoutbtn;
 
 	public void clickShoppingCart() {
-		shoppingCart.click();
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", shoppingCart);	
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", shoppingCart);
+		//shoppingCart.click();
 	}
 
 	public boolean isItemimageExistsInCart() {

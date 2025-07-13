@@ -160,6 +160,8 @@ public class TC009_OrderProduct_EndToEnd_testcase extends BaseClass {
 				"Success message text does not match!");
 
 		cpg.ClickcloseIconPopup();
+		
+		Thread.sleep(1000);
 
 		cpg.setCommentAboutOrder("Iam Ordered" + " " + p.getProperty("searchproductname") + " " + "Product .");
 
@@ -171,6 +173,8 @@ public class TC009_OrderProduct_EndToEnd_testcase extends BaseClass {
 				"Success message text does not match!");
 
 		cpg.ClickcloseIconPopup();
+		
+		Thread.sleep(1000);
 
 		String Item_Name_quantity = cpg.getItemNamequantity();
 

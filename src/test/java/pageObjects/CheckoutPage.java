@@ -19,6 +19,8 @@ public class CheckoutPage extends BasePage {
 		super(driver);
 
 	}
+	
+	JavascriptExecutor js = (JavascriptExecutor) driver;
 
 	@FindBy(xpath = "//input [@value='1']")
 	@CacheLookup
@@ -220,8 +222,9 @@ public class CheckoutPage extends BasePage {
 	}
 
 	public void ClickShoppingMethodchoose() {
-		BaseClass.scrollIntoView(driver,ShoppingMethodchoosebtn);	
-		ShoppingMethodchoosebtn.click();
+		BaseClass.scrollIntoView(driver,ShoppingMethodchoosebtn);
+		js.executeScript("arguments[0].click();", ShoppingMethodchoosebtn);
+		//ShoppingMethodchoosebtn.click();
 	}
 
 	public void ClickflatShippingRateRadio() {

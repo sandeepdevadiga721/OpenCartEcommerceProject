@@ -1,9 +1,12 @@
 package pageObjects;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
+
+import testBase.BaseClass;
 
 public class SuccessMsgAfterOrderPage extends BasePage {
 
@@ -11,6 +14,7 @@ public class SuccessMsgAfterOrderPage extends BasePage {
 		super(driver);
 
 	}
+	JavascriptExecutor js = (JavascriptExecutor) driver;
 
 	@FindBy(xpath = "//h1[normalize-space()='Your order has been placed!']")
 	@CacheLookup
@@ -29,7 +33,9 @@ public class SuccessMsgAfterOrderPage extends BasePage {
 	private WebElement continuebtn;
 
 	public void ClickCountinueBtn() {
-		continuebtn.click();
+		BaseClass.scrollIntoView(driver,continuebtn);
+		js.executeScript("arguments[0].click();", continuebtn);
+		//continuebtn.click();
 	}
 
 	public String getOrderPlacedMsg() {

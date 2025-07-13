@@ -18,8 +18,11 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterClass;
@@ -65,21 +68,43 @@ public class BaseClass {
 		
 		if(p.getProperty("execution_env").equalsIgnoreCase("local"))
 		{
-			switch (br.toLowerCase()) {
+			boolean isHeadless = p.getProperty("headless").equalsIgnoreCase("true");
 
-			case "chrome":
-				driver = new ChromeDriver();
-				break;
-			case "edge":
-				driver = new EdgeDriver();
-				break;
-			case "firefox":
-				driver = new FirefoxDriver();
-				break;
-			default:
-				System.out.println("Invalid browser name...");
-				return;
-			}
+		    switch (br.toLowerCase()) {
+		        case "chrome":
+		            ChromeOptions chromeOptions = new ChromeOptions();
+		            if (isHeadless) {
+		                chromeOptions.addArguments("--headless=new");
+		                chromeOptions.addArguments("--disable-gpu");
+		                chromeOptions.addArguments("--no-sandbox");
+		                chromeOptions.addArguments("--disable-dev-shm-usage");
+		            }
+		            driver = new ChromeDriver(chromeOptions);
+		            break;
+
+		        case "edge":
+		            EdgeOptions edgeOptions = new EdgeOptions();
+		            if (isHeadless) {
+		                edgeOptions.addArguments("headless");
+		                edgeOptions.addArguments("disable-gpu");
+		                edgeOptions.addArguments("no-sandbox");
+		                edgeOptions.addArguments("disable-dev-shm-usage");
+		            }
+		            driver = new EdgeDriver(edgeOptions);
+		            break;
+
+		        case "firefox":
+		            FirefoxOptions firefoxOptions = new FirefoxOptions();
+		            if (isHeadless) {
+		                firefoxOptions.addArguments("--headless");
+		            }
+		            driver = new FirefoxDriver(firefoxOptions);
+		            break;
+
+		        default:
+		            System.out.println("Invalid browser name...");
+		            return;
+		    }
 		}
 		
 		driver.manage().deleteAllCookies();
@@ -152,9 +177,18 @@ public class BaseClass {
 	public static void scrollIntoView(WebDriver driver, WebElement element) {
         try {
             JavascriptExecutor js = (JavascriptExecutor) driver;
-            js.executeScript("arguments[0].scrollIntoView({block: 'center', inline: 'nearest'});", element);
+            js.executeScript("arguments[0].scrollIntoView();", element);
         } catch (Exception e) {
             System.out.println("Failed to scroll element into view: " + e.getMessage());
+        }
+    }
+	
+	public static void clickViaJavaScript(WebDriver driver, WebElement element) {
+        try {
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("arguments[0].click();", element);
+        } catch (Exception e) {
+            System.out.println("Failed to Click: " + e.getMessage());
         }
     }
 
