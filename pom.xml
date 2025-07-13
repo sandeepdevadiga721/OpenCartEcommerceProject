@@ -21,7 +21,9 @@
           <version>3.5.2</version>
           <configuration>
                 <suiteXmlFiles>
-                   <suiteXmlFile>RunPlanesXMLs/Master.xml</suiteXmlFile>
+                   <suiteXmlFile>RunPlanesXMLs/MasterSuite_chrome.xml</suiteXmlFile>
+                   <suiteXmlFile>RunPlanesXMLs/MasterSuite_Edge.xml</suiteXmlFile>
+                   <suiteXmlFile>RunPlanesXMLs/MasterSuite_FF.xml</suiteXmlFile>
                 </suiteXmlFiles>
           </configuration>
         </plugin>
